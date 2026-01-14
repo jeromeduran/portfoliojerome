@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Jerome Duran | Game-Themed IT Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --bg-main: #05070d;
+    --bg-section: #0b1020;
+    --bg-card: rgba(20, 30, 60, 0.85);
+    --neon-blue: #00f7ff;
+    --neon-purple: #8a5cff;
+    --neon-pink: #ff4ecd;
+    --text-main: #eaf2ff;
+    --text-muted: #9aa4c7;
+    --border-glow: rgba(0,247,255,0.35);
+}
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top, #0b1020, #05070d);
+    color: var(--text-main);
+}
+
+/* ===== HEADER ===== */
+header {
+    padding: 80px 10% 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        repeating-linear-gradient(
+            0deg,
+            rgba(255,255,255,0.02) 0px,
+            rgba(255,255,255,0.02) 1px,
+            transparent 2px,
+            transparent 4px
+        );
+    pointer-events: none;
+}
+
+header h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    margin: 0;
+    letter-spacing: 2px;
+    color: var(--neon-blue);
+    text-shadow: 0 0 15px var(--neon-blue);
+}
+
+header p {
+    margin-top: 14px;
+    color: var(--text-muted);
+}
+
+nav {
+    margin-top: 35px;
+}
+
+nav a {
+    display: inline-block;
+    margin: 8px;
+    padding: 12px 22px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.85rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-glow);
+    color: var(--neon-blue);
+    text-shadow: 0 0 8px rgba(0,247,255,0.6);
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background: linear-gradient(135deg, var(--neon-blue), var(--neon-purple));
+    color: #05070d;
+    box-shadow: 0 0 20px var(--neon-blue);
+}
+
+/* ===== SECTIONS ===== */
+section {
+    padding: 80px 10%;
+    background-color: var(--bg-section);
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+section h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: var(--neon-pink);
+    text-shadow: 0 0 10px var(--neon-pink);
+}
+
+/* ===== CARD ===== */
+.card {
+    background: var(--bg-card);
+    padding: 30px;
+    border-radius: 14px;
+    border: 1px solid var(--border-glow);
+    box-shadow:
+        0 0 20px rgba(0,247,255,0.08),
+        inset 0 0 15px rgba(0,0,0,0.6);
+}
+
+/* ===== ABOUT ===== */
+.about-wrapper {
+    display: flex;
+    gap: 35px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-img img {
+    width: 220px;
+    height: 220px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 2px solid var(--neon-blue);
+    box-shadow: 0 0 25px var(--neon-blue);
+}
+
+.about-text p {
+    color: var(--text-muted);
+    line-height: 1.8;
+}
+
+/* ===== SKILLS ===== */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.skills-list span {
+    padding: 10px 18px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.75rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-glow);
+    color: var(--neon-blue);
+    transition: all 0.3s ease;
+}
+
+.skills-list span:hover {
+    background: var(--neon-blue);
+    color: #05070d;
+    box-shadow: 0 0 15px var(--neon-blue);
+}
+
+/* ===== PROJECTS ===== */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.project-card h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--neon-purple);
+}
+
+.project-card p {
+    color: var(--text-muted);
+}
+
+.project-card a {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* ===== CERTIFICATIONS ===== */
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.cert-card img {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid var(--border-glow);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #03040a;
+    padding: 40px 10%;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+footer a {
+    color: var(--neon-blue);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .about-wrapper {
+        text-align: center;
+        justify-content: center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Jerome Duran</h1>
+    <p>IT Student • Game-Inspired Portfolio • Leveling Up in Tech</p>
+    <nav>
+        <a href="#about">ABOUT</a>
+        <a href="#skills">SKILLS</a>
+        <a href="#projects">QUESTS</a>
+        <a href="#certifications">BADGES</a>
+        <a href="#contact">CONTACT</a>
+    </nav>
+</header>
+
+<section id="about">
+<div class="container">
+<h2>PLAYER PROFILE</h2>
+<div class="card">
+<div class="about-wrapper">
+<div class="about-img">
+<img src="images/mypic.jpg" alt="Profile Picture">
+</div>
+<div class="about-text">
+<p>
+Hi! I’m <strong>Jerome Duran</strong>, an IT student starting my journey in the tech world.
+I enjoy learning how systems work, creating interactive projects, and exploring game-like
+experiences through technology. Every skill I learn feels like leveling up.
+</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="skills">
+<div class="container">
+<h2>SKILL TREE</h2>
+<div class="card">
+<div class="skills-list">
+<span>HTML</span>
+<span>CSS</span>
+<span>JavaScript</span>
+<span>Python</span>
+<span>Git & GitHub</span>
+</div>
+</div>
+</div>
+</section>
+
+<section id="projects">
+<div class="container">
+<h2>ACTIVE QUESTS</h2>
+<div class="projects-grid">
+<div class="card project-card">
+<h3>Simple Game Project</h3>
+<p>
+A browser-based game created using HTML, CSS, and JavaScript.
+</p>
+<a href="https://jeromeduran.github.io/final-game/" target="_blank">▶ PLAY QUEST</a>
+</div>
+</div>
+</div>
+</section>
+
+<section id="certifications">
+<div class="container">
+<h2>ACHIEVEMENTS</h2>
+<div class="cert-grid">
+<div class="card cert-card">
+<img src="images/netacad.jpg" alt="Cisco Certificate">
+<h3>Cisco Networking Academy</h3>
+<p>
+<a href="https://www.credly.com/badges/458618b0-49de-4d1b-979c-0fc2ea147912/public_url" target="_blank">
+VIEW BADGE
+</a>
+</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+<h2>PLAYER CONTACT</h2>
+<div class="card">
+<p>Email: jeromeduran0827@gmail.com</p>
+<p>GitHub: <a href="https://github.com/jeromeduran" target="_blank">github.com/jeromeduran</a></p>
+</div>
+</div>
+</section>
+
+<footer>
+<p>© 2026 Jerome Duran</p>
+</footer>
+
+</body>
+</html>
