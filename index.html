@@ -2,23 +2,23 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Jerome Duran | Game-Themed IT Portfolio</title>
+<title>Jerome Duran | Game-Themed Portfolio</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Fonts -->
+<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 :root {
     --bg-main: #05070d;
     --bg-section: #0b1020;
-    --bg-card: rgba(20, 30, 60, 0.85);
+    --bg-card: rgba(20, 30, 60, 0.9);
     --neon-blue: #00f7ff;
     --neon-purple: #8a5cff;
     --neon-pink: #ff4ecd;
     --text-main: #eaf2ff;
     --text-muted: #9aa4c7;
-    --border-glow: rgba(0,247,255,0.35);
+    --border-glow: rgba(0,247,255,0.4);
 }
 
 * {
@@ -37,37 +37,19 @@ body {
 header {
     padding: 80px 10% 60px;
     text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-
-header::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background:
-        repeating-linear-gradient(
-            0deg,
-            rgba(255,255,255,0.02) 0px,
-            rgba(255,255,255,0.02) 1px,
-            transparent 2px,
-            transparent 4px
-        );
-    pointer-events: none;
 }
 
 header h1 {
     font-family: 'Orbitron', sans-serif;
     font-size: 3rem;
     margin: 0;
-    letter-spacing: 2px;
     color: var(--neon-blue);
     text-shadow: 0 0 15px var(--neon-blue);
 }
 
 header p {
-    margin-top: 14px;
     color: var(--text-muted);
+    margin-top: 10px;
 }
 
 nav {
@@ -83,8 +65,8 @@ nav a {
     border-radius: 6px;
     border: 1px solid var(--border-glow);
     color: var(--neon-blue);
-    text-shadow: 0 0 8px rgba(0,247,255,0.6);
-    transition: all 0.3s ease;
+    text-decoration: none;
+    transition: 0.3s ease;
 }
 
 nav a:hover {
@@ -93,7 +75,7 @@ nav a:hover {
     box-shadow: 0 0 20px var(--neon-blue);
 }
 
-/* ===== SECTIONS ===== */
+/* ===== SECTION ===== */
 section {
     padding: 80px 10%;
     background-color: var(--bg-section);
@@ -139,6 +121,12 @@ section h2 {
     object-fit: cover;
     border: 2px solid var(--neon-blue);
     box-shadow: 0 0 25px var(--neon-blue);
+    transition: 0.3s ease;
+}
+
+.about-img img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px var(--neon-blue);
 }
 
 .about-text p {
@@ -160,7 +148,7 @@ section h2 {
     border-radius: 6px;
     border: 1px solid var(--border-glow);
     color: var(--neon-blue);
-    transition: all 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .skills-list span:hover {
@@ -185,42 +173,20 @@ section h2 {
     color: var(--text-muted);
 }
 
-.project-card a {
-    display: inline-block;
-    margin-top: 10px;
-}
-
-/* ===== CERTIFICATIONS ===== */
-.cert-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
-}
-
-.cert-card img {
-    width: 100%;
-    border-radius: 10px;
-    border: 1px solid var(--border-glow);
-}
-
 /* ===== FOOTER ===== */
 footer {
     background: #03040a;
     padding: 40px 10%;
     text-align: center;
-    font-size: 0.85rem;
     color: var(--text-muted);
-}
-
-footer a {
-    color: var(--neon-blue);
+    font-size: 0.85rem;
 }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
     .about-wrapper {
-        text-align: center;
         justify-content: center;
+        text-align: center;
     }
 }
 </style>
@@ -230,12 +196,11 @@ footer a {
 
 <header>
     <h1>Jerome Duran</h1>
-    <p>IT Student • Game-Inspired Portfolio • Leveling Up in Tech</p>
+    <p>IT Student • Game-Inspired Portfolio</p>
     <nav>
         <a href="#about">ABOUT</a>
         <a href="#skills">SKILLS</a>
-        <a href="#projects">QUESTS</a>
-        <a href="#certifications">BADGES</a>
+        <a href="#projects">PROJECTS</a>
         <a href="#contact">CONTACT</a>
     </nav>
 </header>
@@ -243,18 +208,22 @@ footer a {
 <section id="about">
 <div class="container">
 <h2>PLAYER PROFILE</h2>
+
 <div class="card">
 <div class="about-wrapper">
+
 <div class="about-img">
-<img src="images/mypic.jpg" alt="Profile Picture">
+<img src="jerome.jpg" alt="Jerome Duran">
 </div>
+
 <div class="about-text">
 <p>
-Hi! I’m <strong>Jerome Duran</strong>, an IT student starting my journey in the tech world.
-I enjoy learning how systems work, creating interactive projects, and exploring game-like
-experiences through technology. Every skill I learn feels like leveling up.
+Hi! I’m <strong>Jerome Duran</strong>, an IT student passionate about
+technology, game-inspired interfaces, and interactive web design.
+Every project I build feels like leveling up my skills.
 </p>
 </div>
+
 </div>
 </div>
 </div>
@@ -263,6 +232,7 @@ experiences through technology. Every skill I learn feels like leveling up.
 <section id="skills">
 <div class="container">
 <h2>SKILL TREE</h2>
+
 <div class="card">
 <div class="skills-list">
 <span>HTML</span>
@@ -272,48 +242,32 @@ experiences through technology. Every skill I learn feels like leveling up.
 <span>Git & GitHub</span>
 </div>
 </div>
+
 </div>
 </section>
 
 <section id="projects">
 <div class="container">
 <h2>ACTIVE QUESTS</h2>
+
 <div class="projects-grid">
 <div class="card project-card">
 <h3>Simple Game Project</h3>
-<p>
-A browser-based game created using HTML, CSS, and JavaScript.
-</p>
-<a href="https://jeromeduran.github.io/final-game/" target="_blank">▶ PLAY QUEST</a>
+<p>A browser-based game using HTML, CSS, and JavaScript.</p>
 </div>
 </div>
-</div>
-</section>
 
-<section id="certifications">
-<div class="container">
-<h2>ACHIEVEMENTS</h2>
-<div class="cert-grid">
-<div class="card cert-card">
-<img src="images/netacad.jpg" alt="Cisco Certificate">
-<h3>Cisco Networking Academy</h3>
-<p>
-<a href="https://www.credly.com/badges/458618b0-49de-4d1b-979c-0fc2ea147912/public_url" target="_blank">
-VIEW BADGE
-</a>
-</p>
-</div>
-</div>
 </div>
 </section>
 
 <section id="contact">
 <div class="container">
-<h2>PLAYER CONTACT</h2>
+<h2>CONTACT</h2>
+
 <div class="card">
-<p>Email: jeromeduran0827@gmail.com</p>
-<p>GitHub: <a href="https://github.com/jeromeduran" target="_blank">github.com/jeromeduran</a></p>
+<p>Email: <strong>jeromeduran0827@gmail.com</strong></p>
 </div>
+
 </div>
 </section>
 
